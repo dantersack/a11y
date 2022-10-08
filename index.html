@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" x-data="{ currentPage: { header: 'Dashboard' }}">
+<html lang="en" x-data="{ }">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title x-text="`${currentPage.header} - Ecommerce Site`"></title>
+    <title>GitHub</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
-  <body>
-    <a href="#" @click.prevent="currentPage.header = 'Dashboard'">Dashboard</a>
-    <a href="#" @click.prevent="currentPage.header = 'Profile'">Profile</a>
-    <template x-if="currentPage.header === 'Dashboard'">
-      <h1>Dashboard</h1>
-    </template>
-    <template x-if="currentPage.header === 'Profile'">
-      <h1>Profile</h1>
-    </template>
+  <body class="text-gray-900">
+    <header>
+      <a href="#">Home</a>
+      <div role="search">
+        <input
+          type="search"
+          aria-label="Search or jump to..."
+          placeholder="Search or jump to..."
+        />
+      </div>
+    </header>
   </body>
 </html>
