@@ -10,7 +10,7 @@
   <body class="text-gray-900">
     <header class="border-2 border-dashed border-gray-500">
       <a href="#">Home</a>
-      <div role="search">
+      <div role="search" aria-label="Site">
         <input
           type="search"
           aria-label="Search or jump to..."
@@ -30,9 +30,24 @@
       <button type="button" aria-haspopup="menu">View Profile</button>
     </header>
     <h1 class="sr-only">Dashboard</h1>
-    <aside
-      class="border-2 border-dashed border-gray-500"
-      aria-label="Account"
-    ></aside>
+    <aside class="border-2 border-dashed border-gray-500" aria-label="Account">
+      <nav aria-labelledby="recent-repositories-heading">
+        <h2 id="recent-repositories-heading">Recent Repositories</h2>
+        <a href="#">New</a>
+        <div role="search" aria-label="Recent Repositories">
+          <input
+            type="search"
+            aria-label="Find a Repository..."
+            placeholder="Find a Repository..."
+          />
+        </div>
+        <ul>
+          <li><a href="#">user1/repository1</a></li>
+          <li><a href="#">user1/repository3</a></li>
+          <li><a href="#">user2/repository1</a></li>
+        </ul>
+        <button type="button">Show more</button>
+      </nav>
+    </aside>
   </body>
 </html>
